@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/contact.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="navbar">
+          <div class="logo">
+            <h2 class="title">Wildlife Photography Collections</h2>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#subheading">Price</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>      
+        <div class="form-container">
+         <h1 class="head">Contact Us</h1>
+  
+          <div class="contact">
+            <h1>We’re here for you</h1>
+            <p>Need to get in touch with us? Either fill out the form with your <br> inquiry or find the department <br> email you'd like to contact below.</p>
+          </div>
+      
+          <form id="form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+    
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+    
+            <input type="submit" value="Submit">
+          </form>
+          
+        </div>
+      </div>
+      
+      <footer class="footer" id="footer">
+        <div class="footer">
+          <p id="year"></p>
+            <p class="footer-content">Copyright &copy;</p>
+        </div>
+      </footer>
+
+    </div>
+    
+    <script>
+
+     const currentYear = new Date().getFullYear();
+     const yearElement = document.getElementById("year");
+     yearElement.innerText = currentYear;
+
+      const form = document.getElementById("form");
+
+      form.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        // Save the form data to local storage
+        localStorage.setItem("name", name);   //const name = localStorage.getItem("name");
+        localStorage.setItem("email", email);  //const email = localStorage.getItem("email");
+        localStorage.setItem("message", message);  //const message = localStorage.getItem("message");
+
+        alert("Form submitted successfully");
+      });
+    </script>
+  </body>
+</html>
+
+
+

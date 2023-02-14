@@ -1,0 +1,208 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+    background-color: #f7f7f7;
+    }
+    
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #b0f5c5;
+        padding: 1rem 2rem;
+        box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+      }
+      
+      .logo {
+        flex: 1;
+      }
+      
+      nav {
+        flex: 2;
+      }
+      
+      ul {
+        display: flex;
+        justify-content: flex-end;
+        list-style: none;
+      }
+      
+      li {
+        margin: 0 1rem;
+      }
+      
+      a {
+        color: #555;
+        text-decoration: none;
+        font-size: 1.2rem;
+        transition: color 0.2s ease-in-out;
+      }
+      
+      a:hover {
+        color: #0077ff;
+      }
+      
+    
+    .form-container {
+    grid-row: 3 / 4;
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-gap: 1rem;
+    align-items: center;
+    justify-items: center;
+    padding: 2rem;
+    background-color:#fff;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    margin-bottom: 50px;
+    }
+    
+    .contact {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    color: #555;
+    }
+    
+    form {
+    width: 100%;
+    max-width: 500px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    }
+    .head{
+        grid-column: 1/-1 ;
+        text-align: center;
+    }
+    label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #555;
+    }
+    
+    input,
+    textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    margin-bottom: 1rem;
+    }
+    
+    input[type="submit"] {
+    background-color: #0077ff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    }
+    
+    input[type="submit"]:hover {
+    background-color: #0057c1;
+    }
+    .footer-content{
+        display: grid;
+        justify-content: center;
+    }
+    #year{
+        margin-left: 792px;
+        margin-bottom: -34px;}
+
+    @media only screen and (max-width: 768px){
+        .container{
+            overflow-x: hidden;
+            height: 800px;
+        }
+        .wrapper{
+            display: grid;
+            grid-template-areas:
+            'navbar'
+            "head"
+            "contact"
+            "form";
+            grid-template-columns: repeat(1, 1fr);
+            overflow-x: hidden;
+            height: 678px;
+          }
+          .navbar{
+            display: grid;
+            grid-column-start: 1;
+            grid-column-end: 2;
+          }
+
+        .contact{
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+        .form{
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+        .form-container {
+            grid-row: 3 / 4;
+            display: grid;
+            grid-template-columns:1fr 1fr;
+            grid-gap: 1rem;
+            align-items: center;
+            justify-items: center;
+            padding: 2rem;
+            background-color:#fff;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+            border-radius: 10px;
+            margin-bottom: 200px;
+            }
+            .wrapper{
+              height: 600px;
+            }
+            .footer-content{
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            #year{
+                margin-left: 242px;
+                margin-bottom: -29px;}
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px){
+      #year{
+          margin-left: 418px;
+      }
+    }
+    @media only screen and (min-width: 1024px) and (max-width: 1366px){
+      .form-container {
+        grid-row: 3 / 4;
+        display: grid;
+        grid-template-columns:1fr 1fr;
+        grid-gap: 1rem;
+        align-items: center;
+        justify-items: center;
+        padding: 2rem;
+        background-color:#fff;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        border-radius: 10px;
+        margin-bottom: 586px;
+        }
+        .container{
+          overflow-x: hidden;
+          height: 800px;
+      }
+      .footer-content{
+          display: grid;
+          justify-content: center;
+      }
+      #year{
+          margin-left: 548px;
+          margin-bottom: -34px;
+      }
+    }
+  
+  
+      
